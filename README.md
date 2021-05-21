@@ -1,2 +1,2 @@
 # Simple_Hangman
-Simple hangman game with python
+Simple hangman game with Python
