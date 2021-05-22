@@ -1,8 +1,12 @@
+# This is the Simeple_Hangman game code
+# version 1.1 || May 22th 2021
+
 import random as rand
 
 from lib import Words as wordsList 
 import Display as display
 
+# Choose a new word from wordsList database
 def getNewWord(availableWords):
     if len(availableWords) == 0:
         availableWords = wordsList.wordsDB
@@ -10,12 +14,14 @@ def getNewWord(availableWords):
     availableWords.remove(word)
     return availableWords, word.upper()
 
+# Check whether a word has no more blank spaces (underscore)
 def noMoreBlanks(word):
     for i in range(0, len(word)):
         if word[i] == "_":
             return False
     return True
 
+# Count all appearance(s) of 'letter' in 'word' and update the word-progess
 def checkLetterAppearance(letter, word, progress):
     newProgress = ""
     count = 0
@@ -31,7 +37,7 @@ def checkLetterAppearance(letter, word, progress):
         ans = "There is one " + letter + " in this word."
     return newProgress,ans
             
-
+# start a new round of hangman with a given word
 def play(hiddenWord):
     wordProgress = "_" * len(hiddenWord)
     attempts = 7
@@ -79,6 +85,7 @@ def play(hiddenWord):
     else:
         display.DisplayLoss()
 
+# Run the Simple_Hangman game
 def game():
     display.DisplayGame()
     
@@ -86,7 +93,7 @@ def game():
     userArg = ""
 
     while True:
-        userArg = input(">>")
+        userArg = input(">> ")
         print("\n")
         if userArg.upper() == "S":
             display.DisplayInstructions()
@@ -100,6 +107,8 @@ def game():
             print("\nGoodbye!! Thank you for playing :D")
             break;
         display.DisplayMenu()
+
+#__________________________________________________________________________________________#
 
 game()
     
