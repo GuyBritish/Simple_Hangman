@@ -19,8 +19,11 @@ def DisplayMenu():
 # Print game instructions
 def DisplayInstructions():
     print("Simple_Hangman game instructions:")
-    print("<to be updated>")
-    print("\n")
+    print(" 1. Start a new game")
+    print(" 2. Each blank represent a letter of the word")
+    print(" 3. Guess letters/words to try and fill the blanks")
+    print(" 4. Run out of guesses and the man is hanged")
+    print("Good luck!!! \n")
 
 # Print the current game progress
 def DisplayUpdate(gameWord,tries):
