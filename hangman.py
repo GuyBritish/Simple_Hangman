@@ -1,4 +1,4 @@
-# This is the Simeple_Hangman game code
+# This is the Simple_Hangman game code
 # version 1.1 || May 22th 2021
 
 import random as rand
@@ -37,7 +37,7 @@ def checkLetterAppearance(letter, word, progress):
         ans = "There is one " + letter + " in this word."
     return newProgress,ans
             
-# start a new round of hangman with a given word
+# Start a new round of hangman with a given word
 def play(hiddenWord):
     wordProgress = "_" * len(hiddenWord)
     attempts = 7
