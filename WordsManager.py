@@ -1,3 +1,6 @@
+import os
+filepath = os.getcwd()
+
 from lib import Words as wordsdb
 import Display as display
 
@@ -30,9 +33,23 @@ def rmvWord(List, word):
     print("\nThe word ", word, " is removed from the list.")
     return List
 
+def ConfirmChanges(file_name, newList):
+    print(filepath)
+    with open(filepath + file_name, "a") as f:
+        cmtHeader = "\n# This is the default words database for the Simple_Hangman game (currently have " + str(len(newList)) + " words)\n"
+        f.write(cmtHeader)
+        f.write("wordsDB = [\n")
+        for i in range(0,len(newList)):
+            element = "\t\"" + newList[i] + "\""  
+            f.write(element)
+            if i < len(newList) - 1:
+                f.write(",")
+            f.write("\n")
+        f.write("]")
+
 def main():
     display.DisplayWordsManager()
-    
+
     currDB = sorted(wordsdb.wordsDB)
     userArg = ""
     userWord = ""
@@ -52,6 +69,7 @@ def main():
             currDB = rmvWord(currDB, userWord)
             print("\n")
         if userArg.upper() == "Q":
+            ConfirmChanges("\\lib\\Words.py", currDB)
             print("\nChanges confirmed! Goodbye")
             break;
         display.DisplayManagerMenu()
