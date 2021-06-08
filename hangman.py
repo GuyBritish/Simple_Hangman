@@ -1,5 +1,5 @@
 # This is the Simple_Hangman game code
-# version 1.1 || May 22th 2021
+# version 1.2 || June 9th 2021
 
 import random as rand
 
