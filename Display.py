@@ -38,3 +38,15 @@ def DisplayWin():
 # Print loosing message
 def DisplayLoss():
     print("\nGame Over!! You didn't guess the correct word :(\n")
+
+def DisplayWordsManager():
+    print("This is the Words Database Manager!\n")
+    DisplayManagerMenu()
+
+def DisplayManagerMenu():
+    print("Please input command keys:")
+    print("   + \"D\" to display words list.")
+    print("   + \"A\" to add a new word.")
+    print("   + \"R\" to remove an existing word.")
+    print("   + \"Q\" to confirm changes to database.")
+    print("\n")
