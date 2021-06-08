@@ -1,4 +1,4 @@
-# This is the words database for the Simple_Hangman game (currently have 20 words)
+# This is the default words database for the Simple_Hangman game (currently have 30 words)
 wordsDB = [
     "rebellion",
     "alcohol",
@@ -19,5 +19,15 @@ wordsDB = [
     "imperial",
     "coincide",
     "mourning",
-    "ideology"
+    "ideology",
+    "victory",
+    "jury",
+    "spirit",
+    "hat",
+    "conductor",
+    "award",
+    "straw",
+    "radiation",
+    "nervous",
+    "gold",
 ]
