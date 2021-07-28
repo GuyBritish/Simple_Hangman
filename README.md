@@ -1,4 +1,4 @@
-# Simple_Hangman
+# 🎲 Simple_Hangman
 Simple hangman game with Python (3.8.8)
 
 # Versions
